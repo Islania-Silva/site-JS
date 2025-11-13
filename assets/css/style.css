@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: var(--maxw);
     margin: 0 auto;
     padding: 28px;
@@ -24,7 +25,7 @@ body {
 header {
     position: sticky;
     top: 12px;
-    z-index: 30
+    z-index: 30;
 }
 
 .nav {
@@ -42,26 +43,23 @@ header {
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
 }
 
 .brand img {
     height: 60px;
-    /* width: 60px; */
-    /* object-fit: contain; */
     border-radius: 10px;
-    /* background: linear-gradient(90deg, #001b0b, #002a1a) */
 }
 
 .brand .title {
     font-weight: 700;
-    letter-spacing: 0.2px
+    letter-spacing: 0.2px;
 }
 
 .brand .subtitle {
     font-size: 12px;
     color: var(--muted);
-    margin-top: 2px
+    margin-top: 2px;
 }
 
 nav a {
@@ -70,12 +68,12 @@ nav a {
     padding: 8px 12px;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 14px
+    font-size: 14px;
 }
 
 nav a:hover,
 .btn-primary:hover {
-    background: #086e34
+    background: #086e34;
 }
 
 .cta-wa {
@@ -93,23 +91,23 @@ nav a:hover,
     grid-template-columns: 1fr;
     gap: 20px;
     align-items: center;
-    margin: 28px 0
+    margin: 28px 0;
 }
 
 .hero-left h1 {
     font-size: 34px;
-    margin: 6px 0 12px
+    margin: 6px 0 12px;
 }
 
 .hero-left p {
     color: var(--muted);
-    margin: 0 0 16px
+    margin: 0 0 16px;
 }
 
 .badges {
     display: flex;
     gap: 8px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -119,7 +117,7 @@ nav a:hover,
     padding: 10px 14px;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .btn-primary {
@@ -133,26 +131,11 @@ nav a:hover,
 }
 
 @keyframes whats {
-    0% {
-        transform: rotate(0);
-    }
-
-    15% {
-        transform: rotate(-15deg);
-    }
-
-    20% {
-        transform: rotate(15deg);
-    }
-
-    25% {
-        transform: rotate(-15deg);
-    }
-
-    40%,
-    100% {
-        transform: rotate(0);
-    }
+    0% { transform: rotate(0); }
+    15% { transform: rotate(-15deg); }
+    20% { transform: rotate(15deg); }
+    25% { transform: rotate(-15deg); }
+    40%, 100% { transform: rotate(0); }
 }
 
 .btn-secondary {
@@ -161,9 +144,7 @@ nav a:hover,
     color: var(--white)
 }
 
-.btn-secondary:hover {
-    background: rgb(2, 2, 2);
-}
+.btn-secondary:hover { background: rgb(2, 2, 2); }
 
 /* card */
 .card {
@@ -174,19 +155,19 @@ nav a:hover,
     border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+.transparente { background: var(--shadow); }
+
+.exibicao-video { width: 360px; }
+
 /* Gallery grid */
 .grid {
     display: grid;
     gap: 14px
 }
 
-.grid.cols-3 {
-    grid-template-columns: repeat(3, 1fr)
-}
+.grid.cols-3 { grid-template-columns: repeat(3, 1fr) }
 
-.grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr)
-}
+.grid.cols-2 { grid-template-columns: repeat(2, 1fr) }
 
 .thumb {
     overflow: hidden;
@@ -197,6 +178,7 @@ nav a:hover,
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 360px;
 }
 
 .thumb img {
@@ -212,12 +194,12 @@ nav a:hover,
 
 /* Videos */
 .video-wrap {
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 10/9; */
     background: #000;
     border-radius: 12px;
-    overflow: hidden
+    overflow: hidden;
+    width: 300px;margin: auto;
 }
-
 .pricing.over {
     /* display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -234,12 +216,9 @@ nav a:hover,
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.03);
     min-width: 260px;
-    /* ou o valor que quiser */
 }
 
-.price-card h4 {
-    margin: 0 0 8px;
-}
+.price-card h4 { margin: 0 0 8px }
 
 .price-card .price {
     font-weight: 800;
@@ -247,13 +226,9 @@ nav a:hover,
     font-size: 18px;
 }
 
-.price-card img {
-    width: 100%;
-}
+.price-card img { width: 100%; }
 
-#sobre {
-    margin-right: 50px;
-}
+#sobre { margin-right: 50px; }
 
 .footer {
     margin-top: 34px;
@@ -264,72 +239,44 @@ nav a:hover,
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    color: var(--muted)
-}
-
-/* contact form */
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
-    color: var(--white);
-    resize: vertical
-}
-
-form label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 6px;
-    font-size: 13px
+    color: var(--muted);
 }
 
 /* responsive */
 @media(min-width:900px) {
     .hero {
-        grid-template-columns: 1fr 420px
+        grid-template-columns: 1fr 420px;
     }
 
     .grid.cols-3 {
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .pricing {
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat(4, 1fr);
     }
 
 }
 
 @media(max-width:899px) {
-    .grid.cols-3 {
-        grid-template-columns: repeat(2, 1fr)
-    }
+    .grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media(max-width:520px) {
     .brand img {
         height: 44px;
-        width: 44px
+        width: 44px;
     }
 
-    .hero-left h1 {
-        font-size: 26px
-    }
+    .hero-left h1 { font-size: 26px; }
 
-    .grid.cols-3 {
-        grid-template-columns: repeat(1, 1fr)
-    }
-
-    .grid.cols-2 {
-        grid-template-columns: repeat(1, 1fr)
-    }
+    .grid.cols-3 { grid-template-columns: repeat(1, 1fr); }
 
     .nav {
         flex-direction: column;
         align-items: center;
         gap: 8px;
+        margin: auto;
     }
 
     .nav nav {
@@ -344,27 +291,19 @@ form label {
         font-size: 0.95rem;
     }
 
-    .cta-wa {
-        margin-top: 6px;
-    }
+    .cta-wa { margin-top: 6px; }
+
+    .container { max-width: 400px; }
 }
 
 /* small helpers */
-.muted {
-    color: var(--muted)
-}
+.muted { color: var(--muted); }
 
-.small {
-    font-size: 13px
-}
+.small { font-size: 13px; }
 
-.muted.small {
-    padding: 0;
-}
+.muted.small { padding: 0; }
 
-ul.muted.small {
-    padding-left: 15px;
-}
+ul.muted.small { padding-left: 15px; }
 
 .contato {
     display: flex;
@@ -380,7 +319,7 @@ ul.muted.small {
     border-radius: 999px;
     font-weight: 700;
     color: var(--muted);
-    font-size: 13px
+    font-size: 13px;
 }
 
 /* Custom Scroll */
@@ -395,6 +334,4 @@ ul.muted.small {
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #086e34;
-}
+::-webkit-scrollbar-thumb:hover { background: #086e34; }
